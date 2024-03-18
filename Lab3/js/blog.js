@@ -1,39 +1,43 @@
+// Name: Sahil Tankaria
+// Student ID: 100867174
+// Date: March 17th, 2024 
 
 
-
+// Set up an event listener to trigger the fetchBlogPosts function when the DOM content is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     fetchBlogPosts();
 });
 
-// Function to fetch blog posts
+// Async function to fetch blog posts from an external API
 async function fetchBlogPosts() {
     try {
-        // Retrieve posts from the provided URL
+        // Fetch blog posts from the provided URL
         const response = await fetch('https://jsonplaceholder.typicode.com/posts');
         const posts = await response.json();
         
-        // Initialize an array to hold promises for fetching images for the top 20 posts
+        // Initialize an array to store promises for fetching images for the top 20 posts
         let fetchImagePromises = [];
         for (let i = 0; i < 20 && i < posts.length; i++) {
             fetchImagePromises.push(fetchImage(posts[i].id));
         }
         
-        // Wait for all image URL fetches to complete
+        
         const imageUrls = await Promise.all(fetchImagePromises);
         
-        // Once images are fetched, proceed to display the posts and images
+        
         displayBlogPosts(posts.slice(0, 20), imageUrls);
-    } catch (error) {
         // Log any errors encountered during the fetch operation
+    } catch (error) {
+        
         console.error('Error fetching blog posts:', error);
     }
 }
 
-// Function to display blog posts on the webpage
+// Function to display fetched blog posts on the webpage
 function displayBlogPosts(posts, imageUrls) {
     const blogPostsContainer = document.getElementById('blog-posts');
 
-    // Iterating through each post and creating a card for it   
+    // Iterate through each post and create a card for it   
     posts.forEach((post, index) => {
         const postCard = createPostCard(post, imageUrls[index]);
         blogPostsContainer.appendChild(postCard);
@@ -53,7 +57,7 @@ function createPostCard(post, imageUrl) {
     title.classList.add('card-title');
     title.textContent = post.title;
 
-    // Creating and setting up image element
+    // Create and set up image element
     const image = document.createElement('img');
     image.classList.add('card-img-top');
     image.src = imageUrl; 
@@ -68,7 +72,7 @@ function createPostCard(post, imageUrl) {
     button.classList.add('btn-know-more'); 
     button.textContent = 'Know More';
 
-    // Appending elements to build the card
+    // Append elements to build the card
     cardBody.appendChild(title);
     cardBody.appendChild(image);
     cardBody.appendChild(content);
@@ -77,10 +81,9 @@ function createPostCard(post, imageUrl) {
     card.appendChild(cardBody);
 
     return card;
-
-    
 }
 
+// Async function to fetch an image related to a search query
 async function fetchImage(searchQuery) {
     const apiKey = '42930142-edd18e0e848da2115bb4859bf';
     const url = `https://pixabay.com/api/?key=${apiKey}&q=${encodeURIComponent(searchQuery)}&image_type=photo`;
@@ -93,14 +96,13 @@ async function fetchImage(searchQuery) {
                 return content.hits[0].webformatURL;
             } else {
                 console.error('No image found for:', searchQuery);
-                return '1.jpg'; // Default image path
+                return '1.jpg'; 
             }
         } else {
             throw new Error('Failed to retrieve image, server responded with: ' + result.status);
         }
     } catch (error) {
         console.error('Error during image fetch:', error);
-        return '1.jpg'; // Default error image path
+        return '1.jpg'; 
     }
 }
-

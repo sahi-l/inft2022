@@ -1,3 +1,6 @@
+// Name: Sahil Tankaria
+// Student ID: 100867174
+// Date: March 17th, 2024 
 
 let element= document.createElement("li");
 element.setAttribute('class','nav-item');
