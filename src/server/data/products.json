@@ -1,14 +1,14 @@
 [
     {
-        "name": "something " ,
-        "price" : "$19.99"
+        "name": "Avenger",
+        "price": "$29.99"
     },
     {
-        "name": "just me " ,
-        "price" : "$9.99"
+        "name": "Mission Impossible",
+        "price": "$19.99"
     },
     {
-        "name": "who are you " ,
-        "price" : "$2"
+        "name": "Friends",
+        "price": "$7.99"
     }
 ]
