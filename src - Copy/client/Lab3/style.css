@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+     
+    background-size: cover;
+    background-position: center;
+   
+}
+.con{
+    position: absolute;
+    color: rgb(231, 241, 223);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    width: 300px;
+}
+.welcome-container {
+    padding: 20px;
+    border-radius: 8px;
+    text-align:center;
+    background-color: #ffffffc2;
+    padding: 20px 30px;
+    display: block;
+    margin: auto;
+    color: #0c5163;
+   
+}
+.bg-img{
+	 background-image: url('background.jpg');
+    padding: 20px 30px;
+    height: 500px;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Ensure the text stands out against the background */
+h1, p {
+    text-shadow: 2px 2px 4px #000;
+}
+

@@ -1,0 +1,84 @@
+<!-- Name: Sahil Tankaria
+     Student ID: 100867174
+     Date: Feb 18th, 2024  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Style sheet and bootstrap link  -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+  <!-- nav bar with the login and register links -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="theList" class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="web.html">Home</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link active" id="product" aria-current="page" href="product.html">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Services.html">Services</a>
+              </li>
+              <li class="nav-item" id="about">
+                <a class="nav-link active" aria-current="page"  href="About.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="login.html">login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="register.html">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    <div>
+       
+
+        <h2>Login</h2>
+
+        <!-- Login Form with all the fields -->
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="button" onclick="performLogin()">Login</button>
+        </form>
+
+        
+    </div>
+
+  
+  <footer class="footer fixed-bottom bg-dark text-white">
+    <div class="container">
+        <span class="text-muted">Copyright &copy; <span id="currentYear">2024</span>,Sahil</span>
+    </div>
+</footer>
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/login.js"></script>
+<script src="./js/register.js"></script>
+</body>
+</html>
