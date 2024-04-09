@@ -1,0 +1,64 @@
+<%- include('../partials/header.ejs') %>
+
+<main>          
+    <div class="container">
+        <h1>List All Animals, fetched during client side rendering</h1>
+        <table id="animal-client-table" class="table table-strips">
+            <thead>
+                <th>
+                    Animal Name
+                </th>
+                <th>
+                    Number of Legs
+                </th>
+                <th>
+                    Number of Heads
+                </th>
+                <th>
+                    Sound of the Animal
+                </th>
+            </thead>
+            <tbody>
+                <% for (let animal of animals) { %>
+                <tr>
+                    <td><%- animal.name %></td>
+                    <td><%- animal.legs %> legs</td>
+                    <td><%- animal.heads %> heads</td>
+                    <td><%- animal.sound %> sound</td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h1>List All Animals, fetched during server side rendering </h1>
+        <table id="animal-server-table" class="table table-strips">
+            <thead>
+                <th>
+                    Animal Name
+                </th>
+                <th>
+                    Number of Legs
+                </th>
+                <th>
+                    Number of Heads
+                </th>
+                <th>
+                    Sound of the Animal
+                </th>
+            </thead>
+            <tbody>
+                <% for (let animal of animals) { %>
+                <tr>
+                    <td><%- animal.name %></td>
+                    <td><%- animal.legs %> legs</td>
+                    <td><%- animal.heads %> heads</td>
+                    <td><%- animal.sound %> sound</td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</main>
+<script type="module" src="/js/animals/retrieve.js"></script>
+<%- include('../partials/footer.ejs') %> 
