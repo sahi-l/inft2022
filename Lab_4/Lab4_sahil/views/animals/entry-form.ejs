@@ -1,0 +1,46 @@
+<!-- // Name : Sahil Tankaria
+// Student ID : 100867174
+// Date: April 18,2024 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Animal</title>
+</head>
+
+<body>
+    <h1>Add New Animal</h1>
+
+    <form action="/animals" method="POST">
+        <label for="zoo">Zoo:</label>
+        <input type="text" id="zoo" name="zoo" required><br>
+
+        <label for="scientificName">Scientific Name:</label>
+        <input type="text" id="scientificName" name="scientificName" required><br>
+
+        <label for="commonName">Common Name:</label>
+        <input type="text" id="commonName" name="commonName" required><br>
+
+        <label for="givenName">Given Name:</label>
+        <input type="text" id="givenName" name="givenName" required><br>
+
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" required><br>
+
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="text" id="dateOfBirth" name="dateOfBirth" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="isTransportable">Transportable:</label>
+        <input type="checkbox" id="isTransportable" name="isTransportable"><br>
+
+        <button type="submit">Add Animal</button>
+    </form>
+    <script src="../routes/animal.js"></script>
+</body>
+
+</html>

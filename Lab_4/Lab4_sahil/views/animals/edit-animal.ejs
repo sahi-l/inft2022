@@ -1,0 +1,48 @@
+<!-- // Name : Sahil Tankaria
+// Student ID : 100867174
+// Date: April 18,2024 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Animal</title>
+</head>
+
+<body>
+    <h1>Edit Animal</h1>
+
+    <form action="/animals/<%= animal._id %>" method="POST">
+        
+        <label for="zoo">Zoo:</label>
+        <input type="text" id="zoo" name="zoo" value="<%= animal.zoo %>" required><br>
+
+        <label for="scientificName">Scientific Name:</label>
+        <input type="text" id="scientificName" name="scientificName" value="<%= animal.scientificName %>" required><br>
+
+        <label for="commonName">Common Name:</label>
+        <input type="text" id="commonName" name="commonName" value="<%= animal.commonName %>" required><br>
+
+        <label for="givenName">Given Name:</label>
+        <input type="text" id="givenName" name="givenName" value="<%= animal.givenName %>" required><br>
+
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" value="<%= animal.gender %>" required><br>
+
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="text" id="dateOfBirth" name="dateOfBirth" value="<%= animal.dateOfBirth %>" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" value="<%= animal.age %>" required><br>
+
+        <label for="isTransportable">Transportable:</label>
+        <input type="checkbox" id="isTransportable" name="isTransportable" <%= animal.isTransportable ? 'checked' : '' %>><br>
+
+        <input type="hidden" name="_method" value="PUT">
+
+        <button type="submit">Update Animal</button>
+    </form>
+</body>
+
+</html>
